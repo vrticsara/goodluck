@@ -1,0 +1,28 @@
+<div id="dropZone" style="border: 1px solid black; padding: 20px;">
+    Drop skills here
+</div>
+<p id="skill1" draggable="true">HTML</p>
+<p id="skill2" draggable="true">CSS</p>
+<script>
+    // Allow the drop area to accept drops
+    document.getElementById("dropZone").ondragover = function(event) {
+        event.preventDefault();
+    };
+    
+    // When a skill is dragged and dropped
+    document.getElementById("dropZone").ondrop = function(event) {
+        event.preventDefault();
+        var skill = event.dataTransfer.getData("text");
+        event.target.appendChild(document.getElementById(skill));
+    };
+    
+    // Enable dragging by setting data transfer
+    document.getElementById("skill1").ondragstart = function(event) {
+        event.dataTransfer.setData("text", event.target.id);
+    };
+    document.getElementById("skill2").ondragstart = function(event) {
+        event.dataTransfer.setData("text", event.target.id);
+    };
+    </script>
+    
+    

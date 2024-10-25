@@ -1,0 +1,25 @@
+<form id="userForm">
+    <input type="text" id="firstName" placeholder="First Name"><br>
+    <input type="text" id="lastName" placeholder="Last Name"><br>
+    <input type="text" id="jobTitle" placeholder="Job Title"><br>
+    <button type="submit">Submit</button>
+</form>
+<p id="message"></p>
+<script>
+    document.getElementById('userForm').onsubmit = function(event) {
+        event.preventDefault();
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const jobTitle = document.getElementById('jobTitle').value;
+    
+        // Save to Local Storage
+        localStorage.setItem('fullName', `${firstName} ${lastName}`);
+    
+        // Show message and clear fields
+        document.getElementById('message').innerText = `Hello, ${firstName} ${lastName}, ${jobTitle}!`;
+        document.getElementById('firstName').value = '';
+        document.getElementById('lastName').value = '';
+        document.getElementById('jobTitle').value = '';
+    }
+    </script>
+    
