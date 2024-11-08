@@ -12,10 +12,8 @@
         const lastName = document.getElementById('lastName').value;
         const jobTitle = document.getElementById('jobTitle').value;
     
-        // Save to Local Storage
         localStorage.setItem('fullName', `${firstName} ${lastName}`);
     
-        // Show message and clear fields
         document.getElementById('message').innerText = `Hello, ${firstName} ${lastName}, ${jobTitle}!`;
         document.getElementById('firstName').value = '';
         document.getElementById('lastName').value = '';

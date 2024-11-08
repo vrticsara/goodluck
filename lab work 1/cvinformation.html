@@ -1,0 +1,17 @@
+<h2>CV Information Form</h2>
+<form method="POST" enctype="multipart/form-data" action="#">
+    <fieldset>
+        <legend>Introduction</legend>
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Job Title: <input type="text" name="job_title" required></label><br>
+    </fieldset>
+    <fieldset>
+        <legend>Education</legend>
+        <label>School: <input type="text" name="school" required></label><br>
+    </fieldset>
+    <fieldset>
+        <legend>Upload CV Image</legend>
+        <input type="file" name="cv_image" accept=".png, .jpg, .jpeg">
+    </fieldset>
+    <button type="submit">Save CV Info</button>
+</form>

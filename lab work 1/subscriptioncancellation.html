@@ -1,0 +1,26 @@
+<h2>Subscription Cancellation Details</h2>
+<form method="POST" action="#">
+    <fieldset>
+        <legend>Details</legend>
+        <label>Email: <input type="email" name="email" required></label><br>
+        <label>Website: <input type="url" name="website"></label><br>
+        <label>Password: <input type="password" name="password" required></label><br>
+    </fieldset>
+    <fieldset>
+        <legend>Reasons for Ending Subscription</legend>
+        <label>Reason:
+            <select name="reason">
+                <option value="bad_quality">Bad quality</option>
+                <option value="small_size">Small Size</option>
+                <option value="other" selected>Other</option>
+            </select>
+        </label><br>
+        <label>Would you use another tool?
+            <label><input type="radio" name="reuse_tool" value="yes" checked> Yes</label>
+            <label><input type="radio" name="reuse_tool" value="no"> No</label>
+            <label><input type="radio" name="reuse_tool" value="maybe"> Maybe</label>
+        </label><br>
+        <label>Additional Comments: <textarea name="comments" rows="3"></textarea></label><br>
+        <button type="submit">End Subscription</button>
+    </fieldset>
+</form>

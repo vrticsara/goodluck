@@ -1,0 +1,22 @@
+<h2>Feedback Form</h2>
+<form method="POST" action="#">
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Password: <input type="password" name="password" required></label><br>
+    <label>Feedback: <textarea name="feedback" rows="4"></textarea></label><br>
+    <label>How did you hear about us?
+        <select name="source">
+            <option value="facebook">Facebook</option>
+            <option value="linkedin" selected>LinkedIn</option>
+            <option value="instagram">Instagram</option>
+            <option value="tiktok">TikTok</option>
+            <option value="others">Others</option>
+        </select>
+    </label><br>
+    <label><input type="checkbox" name="newsletter"> Sign up for newsletter</label><br>
+    <label>Would you use this tool again?
+        <label><input type="radio" name="reuse" value="yes" checked> Yes</label>
+        <label><input type="radio" name="reuse" value="no"> No</label>
+        <label><input type="radio" name="reuse" value="maybe"> Maybe</label>
+    </label><br>
+    <button type="submit">Submit Feedback</button>
+</form>

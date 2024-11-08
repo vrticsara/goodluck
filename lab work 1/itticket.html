@@ -1,0 +1,18 @@
+<h2>IT Center Ticket Form</h2>
+<form method="POST" enctype="multipart/form-data" action="#">
+    <label>Problem Type:
+        <select name="problem_type">
+            <option value="cv_creator">CV Creator Tool</option>
+            <option value="data_privacy">Data Privacy Concerns</option>
+            <option value="help_guidance" selected>Help & Guidance</option>
+            <option value="file_upload">File upload issues</option>
+        </select>
+    </label><br>
+    <label>Urgency:
+        <label><input type="radio" name="urgency" value="not_urgent"> Not urgent</label>
+        <label><input type="radio" name="urgency" value="mild" checked> Mild</label>
+        <label><input type="radio" name="urgency" value="highly_urgent"> Highly Urgent</label>
+    </label><br>
+    <label>Upload Document: <input type="file" name="ticket_file" accept=".jpg, .jpeg, .png" required></label><br>
+    <button type="submit">Submit Ticket</button>
+</form>
